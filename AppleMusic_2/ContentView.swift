@@ -1,26 +1,30 @@
-//
-//  ContentView.swift
-//  AppleMusic_2
-//
-//  Created by Helena on 3.02.2024.
-//
-
 import SwiftUI
 
-struct ContentView: View {
+struct LibraryView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack(alignment: .center) {
+                Text("Ищете свою музыку?")
+                    .bold()
+                    .font(.system(size: 25))
+                    .padding(0.1)
+                Text("Здесь появится купленная Вами в\n iTunes Store музыка.")
+                    .font(.system(size: 18))
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.center)
+            }
+            .padding(.bottom, 80)
+            .navigationTitle("Медиатека")
+            .navigationBarItems(trailing: NavigationLink("Править", destination: ListView()
+                .navigationBarBackButtonHidden(true))
+                .foregroundColor(.pink))
         }
-        .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LibraryView()
     }
 }
