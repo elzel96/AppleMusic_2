@@ -9,7 +9,7 @@ struct TabBarView: View {
                 Image(systemName: "music.note")
                 Text("Медиатека")
             }
-            Text("Радио")
+            RadioView()
                 .tabItem {
                     Image(systemName: "dot.radiowaves.left.and.right")
                     Text("Радио")
