@@ -19,12 +19,21 @@ struct PlayerView: View {
                 .font(.system(size: 18))
                 .font(.subheadline)
                 .foregroundColor(Color(UIColor.systemGray))
-            Image(systemName: "play.fill")
-                .font(.system(size: 40))
-                .padding(.leading, 30)
-            Image(systemName: "forward.fill")
-                .font(.system(size: 40))
-                .foregroundColor(Color(UIColor.systemGray4))
+            Button {
+                print("play")
+            } label: {
+                Image(systemName: "play.fill")
+                    .font(.system(size: 30))
+                    .padding(.leading, 30)
+                    .foregroundColor(Color(UIColor.systemGray4))
+            }
+            Button {
+                print("playf")
+            } label: {
+                Image(systemName: "forward.fill")
+                    .font(.system(size: 30))
+                    .foregroundColor(.gray)
+            }
         }
         .frame(width: UIScreen.main.bounds.width, alignment: .leading)
         .frame(height: 80)
