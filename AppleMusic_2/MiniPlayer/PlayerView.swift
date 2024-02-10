@@ -25,7 +25,7 @@ struct PlayerView: View {
                 Image(systemName: "play.fill")
                     .font(.system(size: 30))
                     .padding(.leading, 30)
-                    .foregroundColor(Color(UIColor.systemGray4))
+                    .foregroundColor(.black)
             }
             Button {
                 print("playf")
